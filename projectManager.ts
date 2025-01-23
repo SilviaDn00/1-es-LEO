@@ -21,7 +21,7 @@ export class ProjectManager {
     }
 
     //Filtra i progetti per team
-    progettiPerTeam(team: string): Project[] {
+    filterTeamProjects(team: string): Project[] {
         return this.projects.filter(project => project.team === team);
     }
 }

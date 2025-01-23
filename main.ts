@@ -15,9 +15,9 @@ projectManager.addProject(project2);
 
 
 // Crea alcuni task
-const task1 = new Task(1, 'Task 1', 'TO_DO', 'ALTA', 'Mario Rossi');
-const task2 = new Task(2, 'Task 2', 'IN_PROGRESS', 'MEDIA', 'Luigi Bianchi');
-const task3 = new Task(3, 'Task 3', 'DONE', 'BASSA', 'Giovanni Verdi');
+const task1 = new Task(1, 'Task 1', 'TO_DO', 'ALTA', 'Ilenia Taccogna');
+const task2 = new Task(2, 'Task 2', 'IN_PROGRESS', 'MEDIA', 'Silvia De Nicolo');
+const task3 = new Task(3, 'Task 3', 'DONE', 'BASSA', 'Giuseppe Latrofa');
 
 // Aggiungiamo i task ai progetti
 project1.addTask(task1);
@@ -35,15 +35,15 @@ project2.addTask(task3);
 
 
 // Recuperiamo i progetti per team
-const progettiDelTeam = projectManager.progettiPerTeam('Team A');
+const teamProjects = projectManager.filterTeamProjects('Team A');
 console.log("I progetti del team sono: ");
-progettiDelTeam.forEach(progetto => {
-    console.log(`ID: ${progetto.id}, Nome: ${progetto.description}, Team: ${progetto.team}`);
+teamProjects.forEach(project => {
+    console.log(`ID: ${project.id}, Nome: ${project.description}, Team: ${project.team}`);
 });
 
 // Recuperiamo i task ad alta priorità per il progetto1
-const taskAltaPriorita = project1.taskAdAltaPriorita();
+const highPriorityTasks = project1.highPriorityTask();
 console.log("\nI task ad alta priorità sono: ");
-taskAltaPriorita.forEach(task => {
+highPriorityTasks.forEach(task => {
     console.log(`ID: ${task.id}, Descrizione: ${task.description}, Priorità: ${task.priority}, Status: ${task.status}`);
 });

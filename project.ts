@@ -32,7 +32,7 @@ export class Project {
     }
 
     //Filtra i task ad alta priorità
-    taskAdAltaPriorita(): Task[] {
+    highPriorityTask(): Task[] {
         return this.projectTasks.filter(task => task.priority === 'ALTA');
     }
 }

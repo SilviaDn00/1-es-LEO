@@ -12,9 +12,9 @@ const project2 = new project_1.Project(2, 'Progetto 2', 'Team B', new Date('2025
 projectManager.addProject(project1);
 projectManager.addProject(project2);
 // Crea alcuni task
-const task1 = new task_1.Task(1, 'Task 1', 'TO_DO', 'ALTA', 'Mario Rossi');
-const task2 = new task_1.Task(2, 'Task 2', 'IN_PROGRESS', 'MEDIA', 'Luigi Bianchi');
-const task3 = new task_1.Task(3, 'Task 3', 'DONE', 'BASSA', 'Giovanni Verdi');
+const task1 = new task_1.Task(1, 'Task 1', 'TO_DO', 'ALTA', 'Ilenia Taccogna');
+const task2 = new task_1.Task(2, 'Task 2', 'IN_PROGRESS', 'MEDIA', 'Silvia De Nicolo');
+const task3 = new task_1.Task(3, 'Task 3', 'DONE', 'BASSA', 'Giuseppe Latrofa');
 // Aggiungiamo i task ai progetti
 project1.addTask(task1);
 project1.addTask(task2);
